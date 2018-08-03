@@ -11,20 +11,17 @@ namespace SeleniumTest2
 {
     internal class ContactPage : AbstractPage
     {
+        private readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         String ButtonStoredAttribute;
         [FindsBy(How = How.XPath, Using = "//span[contains(., 'U.S. West')]")]
         private IWebElement US_WestButton { get; set; }
-        public ContactPage()
-        {
-            driver = AbstractTest.GetDriver();
-            new WebDriverWait(driver, System.TimeSpan.FromSeconds(5)).Until(
-            d => ((IJavaScriptExecutor)d).ExecuteScript("return document.readyState").Equals("complete"));
-            PageFactory.InitElements(driver, this);
-        }
+
 
         internal void ClickUS_WestButtonState()
         {
-            ButtonStoredAttribute=US_WestButton.GetAttribute("class");
+            log.Info("Clicking WestButtonState button");
+            ButtonStoredAttribute = US_WestButton.GetAttribute("class");
             US_WestButton.Click();
             Assert.AreNotEqual(ButtonStoredAttribute, US_WestButton.GetAttribute("class"));
         }

@@ -11,22 +11,16 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SeleniumTest2.SRC.PageObojects.AbstractPage;
 
 namespace SeleniumTest2
 {
-    //[TestFixture(typeof(FirefoxDriver))]
-    /*
-    [TestFixture(typeof(ChromeDriver))]
-    public class SeleniumTests<TWebDriver> : AbstractTest where TWebDriver : IWebDriver, new()
+    [TestFixture(arguments: BrowserType.Chrome)]
+    [TestFixture(arguments: BrowserType.Firefox)]
+    public class SeleniumTestsss : AbstractTest
     {
-
-        [SetUp]
-        public void InitializeDriver()
+        public SeleniumTestsss(BrowserType browser) : base(browser)
         {
-            
-
-            driver = new TWebDriver();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }
 
         [Test]
@@ -36,6 +30,7 @@ namespace SeleniumTest2
             SearchResultPage searchResultPage = omadaNetHomePage.SearchFor("gartner");
             searchResultPage.VerifyResultsNumberMoreThan(1).
                 VerifyResults("There is Safety in Numbers");
+            //there is no such thing on result page so this test will always fail
         }
         [Test]
         public void OmadaNetTest_3_4()
@@ -76,15 +71,9 @@ namespace SeleniumTest2
         {
             OmadaNetHomePage omadaNetHomePage = new OmadaNetHomePage();
             CustomerCasesPage customerCasesPage = omadaNetHomePage.OpenCustomerCasesPage();
+
             DownloadCasesPage downloadCasesPage = customerCasesPage.ClickDownloadButtonFor(CustomerCasesPage.Customers.Ecco);
-            downloadCasesPage.FillTheData();
+            downloadCasesPage.FillTheDataAndDownload();
         }
-
-
-
-
-
     }
-
-    */
 }

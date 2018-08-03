@@ -39,6 +39,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -59,8 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program — Kopia.cs" />
+    <Compile Include="SRC\Helper.cs" />
+    <Compile Include="SRC\PageObojects\DownloadCasesPage.cs" />
+    <Compile Include="SRC\PageObojects\CustomerCasesPage.cs" />
     <Compile Include="SRC\PageObojects\ContactPage.cs" />
     <Compile Include="SRC\PageObojects\NewsPage.cs" />
+    <Compile Include="SRC\PageObojects\PrivacyPolicyPage.cs" />
     <Compile Include="SRC\PageObojects\SearchResultPage.cs" />
     <Compile Include="SRC\PageObojects\AbstractPage.cs" />
     <Compile Include="SRC\PageObojects\OmadaNetHomePage.cs" />
@@ -70,6 +78,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

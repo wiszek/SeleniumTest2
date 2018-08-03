@@ -10,19 +10,14 @@ using System.Threading.Tasks;
 
 namespace SeleniumTest2.SRC.PageObojects
 {
-    class NewsPage:AbstractPage
+    class NewsPage : AbstractPage
     {
-        public NewsPage()
-        {
-            driver = AbstractTest.GetDriver();
-            new WebDriverWait(driver, System.TimeSpan.FromSeconds(5)).Until(
-            d => ((IJavaScriptExecutor)d).ExecuteScript("return document.readyState").Equals("complete"));
-            PageFactory.InitElements(driver, this);
-        }
+        private readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public void verifyArticle(string article)
 
+        public void VerifyArticle(string article)
         {
+            log.Info("Veryfing if article exists : " + article);
             IReadOnlyCollection<IWebElement> anchors = driver.FindElements(By.XPath("//h1[@class='cases__heading']"));
             bool found = false;
 
