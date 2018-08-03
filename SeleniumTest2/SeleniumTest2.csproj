@@ -62,7 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program — Kopia.cs" />
+    <Compile Include="Tests.cs" />
     <Compile Include="SRC\Helper.cs" />
     <Compile Include="SRC\PageObojects\DownloadCasesPage.cs" />
     <Compile Include="SRC\PageObojects\CustomerCasesPage.cs" />
@@ -72,7 +72,6 @@
     <Compile Include="SRC\PageObojects\SearchResultPage.cs" />
     <Compile Include="SRC\PageObojects\AbstractPage.cs" />
     <Compile Include="SRC\PageObojects\OmadaNetHomePage.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SRC\AbstractTest.cs" />
   </ItemGroup>
