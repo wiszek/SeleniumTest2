@@ -1,0 +1,51 @@
+“Implementation of an Automated test.
+
+· Using WebDriver 3, NUnit 3, .Net Framework 4.5-4.6.1 (C#) implement the following:
+
+·  
+
+1.      Open “omada.net”
+
+§  Make sure the page is loaded properly (1-2 checks of your choice)
+
+2.      Execute search for “gartner” (using search box in the top right corner of the front page)
+
+§  Verify that the search gives more than 1 result and that there is “There is Safety in Numbers” among those
+
+3.      Click on the link “Gartner IAM Summit 2016 - London”
+
+§  And check you’re redirected to the particular article and that the page is loaded properly (1-2 checks of your choice)
+
+4.      Navigate to News
+
+§  More… > News & Events > News
+
+§  Verify that the same article is present there.
+
+5.      Go to the home page
+
+§  Click on Contact. On opened page click U.S West and check if there is class change on this element (take a screenshot of that)
+
+§  On this same page do a mouse hover on different location (take a screenshot before and after performing the action)
+
+6.      Open Read Privacy Policy in another tab. Check if it is opened and loaded properly (1-2 checks of your choice)
+
+7.      Click on Close button for Privacy Policy on previous tab and close tab with displayed Privacy Policy. Check if Privacy Policy will be not shown anymore on the site.
+
+8.      From the bottom of the Home page choose Cases link. On opened page click Download PDF button in the cases for ECCO company. Fill necessary data to download PDF file. After downloading file, check if it is downloaded to you local machine.
+
+·        Make sure the task is clear, feel free to raise any related questions before submitting the test.
+
+·        Provide the hours spent on this task.
+
+·        The scenario might be decomposed to more than 1 test in any particular way, if you find it necessary (explanation/comments required).
+
+·        Test project code should be clean and simple.
+
+·        Test project should meet .NET coding standards
+
+·        Use non-build in logging framework to save logs from verification process
+
+·        Support 2 browsers of your choice (also please explain your choice here).
+
+·        Please add the solution to your GitHub repository.”
